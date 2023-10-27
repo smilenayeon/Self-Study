@@ -1,7 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext,useReducer, reducer} from "react";
 import { themeContext } from "../App";
 
+
 function Main() {
+
+    const [money, dispatch] =useReducer (reducer, 500);
+
+    const ACTION_TYPES = {withdrawl: ""}
+
+
+
   const { isDark } = useContext(themeContext);
   return (
     <div
@@ -13,6 +21,12 @@ function Main() {
       }
     >
       This is the main page for Diana.
+
+      <h2>{money}</h2>
+      <button>Buy Food</button>
+      <button>Salary Day</button>
+
+
     </div>
   );
 }
