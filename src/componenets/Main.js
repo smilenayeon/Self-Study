@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
-import { themeContext } from '../App';
+import React from 'react';
+
 
 function Main() {
-    const sharedStyle= useContext(themeContext);
+   
   return (
-    <div className="main"  style= {sharedStyle.style}>
+    <div className="main"  >
    This is the main page for Diana.
     </div>
   )
