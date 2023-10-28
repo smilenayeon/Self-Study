@@ -3,10 +3,11 @@ import { themeContext, userContext } from "../App";
 import Count from "./Count";
 import Money from "./Money";
 import Employer from "./Employer";
+import Spending from "./Spending";
 
 
 function Main() {
-    const [inputValue, setInputValue] = useState("DIANA");
+    const [inputValue, setInputValue] = useState ("DIANA");
 
     const {user, setUser} =  useContext (userContext);
 
@@ -33,11 +34,12 @@ function Main() {
         <input type="text"  placeholder="type user name" onChange={handleChange}/>
         <button onClick={handleSetUser}>Set User</button>
       This is the main page for {user}.
-
-      <Count />
+<div className="container">
+      <div><Count />
       <Money />
-      <Employer />
-
+      <Employer /></div>
+      <div><Spending /></div>
+</div>
     </div>
   );
 }

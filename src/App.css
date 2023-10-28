@@ -24,3 +24,17 @@ button {
   margin-left: 2rem;
   border: 2px solid orange;
 }
+
+.container{
+  display:flex;
+  gap:2rem;
+}
+
+.container > div {
+  border: 2px solid grey;
+}
+
+.detail{
+  font-weight: 400;
+  font-size:1rem;
+}
