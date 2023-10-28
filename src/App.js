@@ -5,11 +5,14 @@ import Footer from "./componenets/Footer";
 import React, { useState, createContext } from "react";
 
 const themeContext = createContext();
+const userContext = createContext();
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const [user, setUser] = useState ("DIANA");
 
   return (
+    <userContext.Provider value={{user, setUser}}>
     <themeContext.Provider value={{ isDark, setIsDark }}>
       <div className="app">
         <Header />
@@ -17,8 +20,9 @@ function App() {
         <Footer />
       </div>
     </themeContext.Provider>
+    </userContext.Provider>
   );
 }
 
-export { themeContext };
+export { themeContext, userContext };
 export default App;

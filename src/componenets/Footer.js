@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { themeContext } from "../App";
+import { themeContext, userContext } from "../App";
 
 function Footer() {
   const { isDark, setIsDark } = useContext(themeContext);
+  const  {user} = useContext (userContext);
 
   const handleToggle = () => {
     setIsDark(!isDark);
@@ -17,7 +18,7 @@ function Footer() {
           : { backgroundColor: "grey", color: "black" }
       }
     >
-      copyright ⓒ Diana
+      copyright ⓒ {user}
       <button
         onClick={handleToggle}
         style={

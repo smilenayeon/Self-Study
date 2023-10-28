@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
-import { themeContext } from "../App";
+import { themeContext, userContext } from "../App";
+
 
 function Header() {
   const { isDark } = useContext(themeContext);
+  const {user} = useContext (userContext);
 
   return (
     <div
@@ -13,7 +15,7 @@ function Header() {
           : { backgroundColor: "pink", color: "black" }
       }
     >
-      <h1>Welcome Diana</h1>
+      <h1>Welcome {user}</h1>
     </div>
   );
 }
