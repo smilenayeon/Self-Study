@@ -1,12 +1,9 @@
-import React, { useContext,useReducer, reducer} from "react";
+import React, { useContext} from "react";
 import { themeContext } from "../App";
+import Count from "../componenets/Count";
 
 
 function Main() {
-
-    const [money, dispatch] =useReducer (reducer, 500);
-
-    const ACTION_TYPES = {withdrawl: ""}
 
 
 
@@ -22,10 +19,7 @@ function Main() {
     >
       This is the main page for Diana.
 
-      <h2>{money}</h2>
-      <button>Buy Food</button>
-      <button>Salary Day</button>
-
+      <Count />
 
     </div>
   );
