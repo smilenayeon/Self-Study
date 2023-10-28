@@ -4,6 +4,7 @@ import Count from "./Count";
 import Money from "./Money";
 import Employer from "./Employer";
 import Spending from "./Spending";
+import Learn from "./Learn";
 
 
 function Main() {
@@ -37,8 +38,11 @@ function Main() {
 <div className="container">
       <div><Count />
       <Money />
-      <Employer /></div>
-      <div><Spending /></div>
+      <Employer />
+      </div>
+      <div><Spending />
+      <Learn />
+      </div>
 </div>
     </div>
   );
