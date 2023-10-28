@@ -19,7 +19,7 @@ function moneyReducer(currentMoney, action){
   return (
 
     <div>
-<h3>{money}</h3>
+<h3>money:{money}</h3>
 <button onClick={handleBuy}>Buy</button>
 <button onClick={handlePaid}>Get Paid</button>
     </div>

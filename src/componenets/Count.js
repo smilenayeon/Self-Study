@@ -22,7 +22,7 @@ function Count() {
 
   return (
     <div>
-    <h3>{count}</h3>
+    <h3>number:{count}</h3>
     <button onClick={increase}>+</button>
     <button onClick={reset}>reset</button>
     <button onClick={decrease}>-</button>

@@ -1,7 +1,8 @@
 import React, { useState,useContext} from "react";
 import { themeContext, userContext } from "../App";
-import Count from "../componenets/Count";
-import Money from "../componenets/Money";
+import Count from "./Count";
+import Money from "./Money";
+import Employer from "./Employer";
 
 
 function Main() {
@@ -35,6 +36,7 @@ function Main() {
 
       <Count />
       <Money />
+      <Employer />
 
     </div>
   );
