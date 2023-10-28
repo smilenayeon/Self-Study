@@ -1,19 +1,19 @@
-import data from "../data.json";
+
 import React, {useState, useEffect} from "react";
 
 function Learn() {
 
-const [days, setDays] = useState([]);
+const [data, setData] = useState();
 
- useEffect(() => {
-    setDays(data.days);
-},[]);
+useEffect(() => {
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then((resp) => resp.json()) 
+      .then((apiData) => setData(apiData.message)); 
+  }, []);
 
 return (
     <div>
-<ul>
-{days.map(day => (<li key={day.id}>day:{day.day}</li>))}
-</ul>
+<img height= "120px" src={data} alt="random dog pic"/>
 
     </div>
   );
