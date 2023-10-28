@@ -1,6 +1,7 @@
 import React, { useState,useContext} from "react";
 import { themeContext, userContext } from "../App";
 import Count from "../componenets/Count";
+import Money from "../componenets/Money";
 
 
 function Main() {
@@ -33,6 +34,7 @@ function Main() {
       This is the main page for {user}.
 
       <Count />
+      <Money />
 
     </div>
   );
