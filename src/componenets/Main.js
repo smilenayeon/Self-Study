@@ -5,6 +5,7 @@ import Money from "./Money";
 import Employer from "./Employer";
 import Spending from "./Spending";
 import Learn from "./Learn";
+import Dessert from "./Dessert";
 
 
 function Main() {
@@ -40,8 +41,13 @@ function Main() {
       <Money />
       <Employer />
       </div>
-      <div><Spending />
+      <div>
+      <Spending />
       <Learn />
+      
+      </div>
+      <div>
+        <Dessert />
       </div>
 </div>
     </div>

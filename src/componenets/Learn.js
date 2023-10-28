@@ -7,7 +7,7 @@ const [data, setData] = useState();
 
 useEffect(() => {
     fetch("https://dog.ceo/api/breeds/image/random")
-      .then((resp) => resp.json()) 
+      .then((res) => res.json()) 
       .then((apiData) => setData(apiData.message)); 
   }, []);
 
