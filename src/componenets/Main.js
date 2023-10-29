@@ -7,23 +7,26 @@ import Spending from "./Spending";
 import Learn from "./Learn";
 import Dessert from "./Dessert";
 import Typed from "./Typed";
+import Survey from "./Survey";
 
 
 function Main() {
-    const [inputValue, setInputValue] = useState ("DIANA");
-
-    const {user, setUser} =  useContext (userContext);
-
   const { isDark } = useContext(themeContext);
- 
+
+  const {user, setUser} =  useContext (userContext);
+
+ const [name, setName] = useState ("");
+
   const handleChange = (e)=>{
-     console.log (e.target.value);
-    setInputValue(e.target.value);};
+   setName(e.target.value); 
+   };
 
-  const handleSetUser =()=>{
-    setUser(inputValue);
-    setInputValue("");};
-
+  const handleSetUser =(e)=>{
+    e.preventDefault();
+    setUser(name);
+    setName("");
+   
+    };
 
   return (
     <div
@@ -33,10 +36,13 @@ function Main() {
           ? { backgroundColor: "black", color: "pink" }
           : { backgroundColor: "pink", color: "black" }
       }
-    >   
-        <input type="text"  placeholder="type user name" onChange={handleChange}/>
-        <button onClick={handleSetUser}>Set User</button>
+    >   <form onSubmit={handleSetUser}>
+    <label htmlFor="name">Name:</label>
+        <input key="name" type="text"  placeholder="type user name" name="name" value={name} onChange={handleChange}/>
+        <input type="submit" value="submit"/>
+        </form>
       This is the main page for {user}.
+
 <div className="container">
       <div><Count />
       <Money />
@@ -50,6 +56,7 @@ function Main() {
       <div>
         <Dessert />
         <Typed />
+        <Survey />
       </div>
 </div>
     </div>

@@ -6,17 +6,22 @@ const  inputRef = useRef();
 
 const [inputValue, setInputValue] = useState();
 
-const handleClick = ()=>{
+const handleClick = (e)=>{
+    e.preventDefault();
     const  typedContent= inputRef.current.value;
     setInputValue(typedContent);
+  
     
 }
   
 
   return (
     <div>
-      <input ref={inputRef}/>
+    <form>
+    <lable htmlFor="typedInput">Typed-useRef practice</lable>
+      <input key="typedInput" ref={inputRef}  name="typedInput" />
       <button onClick={handleClick}>Check</button>
+      </form>
       <p>Typed: {inputValue}</p>
     </div>
   );

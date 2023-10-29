@@ -9,7 +9,7 @@ const userContext = createContext();
 
 function App() {
   const [isDark, setIsDark] = useState(false);
-  const [user, setUser] = useState ("DIANA");
+  const [user, setUser] = useState ("");
 
   return (
     <userContext.Provider value={{user, setUser}}>
