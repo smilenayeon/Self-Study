@@ -1,19 +1,25 @@
-import React, {useEffect, useRef,useState} from 'react'
+import React, { useRef, useState } from 'react';
 
 function Typed() {
 
-const inputRef = useRef();
+const  inputRef = useRef();
 
-useEffect(()=>{
-    inputRef.current.focus();
-},[]);
+const [inputValue, setInputValue] = useState();
+
+const handleClick = ()=>{
+    const  typedContent= inputRef.current.value;
+    setInputValue(typedContent);
+    
+}
+  
 
   return (
     <div>
-    <input ref={inputRef} type="text"/>
-
+      <input ref={inputRef}/>
+      <button onClick={handleClick}>Check</button>
+      <p>Typed: {inputValue}</p>
     </div>
-  )
+  );
 }
 
 export default Typed;
