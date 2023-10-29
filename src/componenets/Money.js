@@ -15,12 +15,12 @@ const handleAmount = (e)=>{
 const [money, moneyDispatch] = useReducer(moneyReducer,500);
 
 function moneyReducer(currentMoney, action){
-    if (action ==='BUY'){
-        return  currentMoney - Number(amount);
-    }else if (action ==='PAID'){
-        return currentMoney + Number(amount);
-    }
 
+    switch(action){
+        case 'BUY': return  currentMoney - Number(amount);
+        case 'PAID': return currentMoney + Number(amount);
+        default:return "uh oh";
+    }
 }
 
     function handleBuy(){ moneyDispatch('BUY')};

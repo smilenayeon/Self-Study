@@ -17,12 +17,13 @@ const handleClick = (e)=>{
 
   return (
     <div>
+    <p>Typed: {inputValue}</p>
     <form>
     <lable htmlFor="typedInput">Typed-useRef practice</lable>
       <input key="typedInput" ref={inputRef}  name="typedInput" />
       <button onClick={handleClick}>Check</button>
       </form>
-      <p>Typed: {inputValue}</p>
+      
     </div>
   );
 }
