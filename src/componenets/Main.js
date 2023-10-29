@@ -8,6 +8,7 @@ import Learn from "./Learn";
 import Dessert from "./Dessert";
 import Typed from "./Typed";
 import Survey from "./Survey";
+import SignUp from"./SignUp";
 
 function Main() {
   const { isDark } = useContext(themeContext);
@@ -54,7 +55,7 @@ function Main() {
           <Count />
           <Money />
           <Employer />
-          
+          <SignUp/>
         </div>
 
         <div>
