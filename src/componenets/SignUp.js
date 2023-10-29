@@ -6,14 +6,22 @@ function SignUp() {
  const[firstName, setFirstName] = useState("");
     const[lastName, setLastName] = useState("");
     const[email, setEmail] = useState("");
-    const[password, setPassword] = useState("");///////////////working on password validation
+    const[password, setPassword] = useState("");
     const[role, setRole] = useState("role");
 
     const firstNameChange = (e)=>{setFirstName(e.target.value)};
     const lastNameChange = (e)=>{setLastName(e.target.value)};
     const emailChange = (e)=>{setEmail(e.target.value)};
-    const passwordChange = (e)=>{setPassword({...password, value:e.target.value})};////////////////working on password validation
+    const passwordChange = (e)=>{setPassword({...password, value:e.target.value})};
     const roleChange = (e)=>{setRole(e.target.value)};
+
+    const getIsFormValid = ()=>{
+            return(firstName &&
+                   email &&
+                   password.value.length >= 8 &&
+                   role !== "role");
+        };
+
 
     const clearForm=()=>{
         setFirstName("");
@@ -57,7 +65,7 @@ function SignUp() {
                 <option value="individual">Individual</option>
                 <option value="business">Business</option>
             </select>
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleSubmit} disabled={!getIsFormValid()}>Submit</button>
             </fieldset>
         </form>
     </div>
