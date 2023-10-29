@@ -6,7 +6,7 @@ function DessertList( props) {
   return (
     <div>
         <ul>
-            {sortedList.map((dessert)=><li>{dessert.name} {dessert.calories}</li>)}
+            {sortedList.map((dessert)=><li>{dessert.name}- {dessert.calories}Cal</li>)}
         </ul>
     </div>
   )

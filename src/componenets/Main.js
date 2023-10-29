@@ -6,6 +6,7 @@ import Employer from "./Employer";
 import Spending from "./Spending";
 import Learn from "./Learn";
 import Dessert from "./Dessert";
+import Typed from "./Typed";
 
 
 function Main() {
@@ -48,6 +49,7 @@ function Main() {
       </div>
       <div>
         <Dessert />
+        <Typed />
       </div>
 </div>
     </div>
