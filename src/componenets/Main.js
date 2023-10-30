@@ -10,6 +10,7 @@ import Typed from "./Typed";
 import Survey from "./Survey";
 import SignUp from"./SignUp";
 import UseCoupon from "./UseCoupon";
+import RandomPerson from "./RandomPerson";
 
 function Main() {
   const { isDark } = useContext(themeContext);
@@ -69,6 +70,7 @@ function Main() {
           <Dessert />
           <Typed />
           <Survey />
+          <RandomPerson />
         </div>
 
       </div>
