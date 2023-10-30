@@ -11,6 +11,8 @@ import Survey from "./Survey";
 import SignUp from"./SignUp";
 import UseCoupon from "./UseCoupon";
 import RandomPerson from "./RandomPerson";
+import Days from "./Days";
+
 
 function Main() {
   const { isDark } = useContext(themeContext);
@@ -58,6 +60,7 @@ function Main() {
           <Money />
           <Employer />
           <SignUp/>
+          <Days/>
         </div>
 
         <div>
