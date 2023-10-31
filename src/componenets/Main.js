@@ -12,6 +12,8 @@ import SignUp from"./SignUp";
 import UseCoupon from "./UseCoupon";
 import RandomPerson from "./RandomPerson";
 import Days from "./Days";
+import HowSurvey from "./HowSurvey";
+
 
 
 function Main() {
@@ -67,6 +69,7 @@ function Main() {
           <Spending />
           <Learn />
           <UseCoupon/>
+          <HowSurvey />
         </div>
 
         <div>
