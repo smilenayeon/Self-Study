@@ -13,6 +13,7 @@ import UseCoupon from "./UseCoupon";
 import RandomPerson from "./RandomPerson";
 import Days from "./Days";
 import HowSurvey from "./HowSurvey";
+import MouseTracker from "./MouseTracker";
 
 
 
@@ -77,6 +78,7 @@ function Main() {
           <Typed />
           <Survey />
           <RandomPerson />
+          <MouseTracker/>
         </div>
 
       </div>
