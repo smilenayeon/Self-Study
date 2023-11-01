@@ -16,7 +16,7 @@ import React, {useState, useEffect} from 'react'
             };
 
             window.addEventListener("mousemove", handleMousePositionChange);
-            return(()=>{window.addEventListener("mousemove", handleMousePositionChange)} );
+            return(()=>{window.removeEventListener("mousemove", handleMousePositionChange)} );
         },[]);
 
         return render({mousePosition});
