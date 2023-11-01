@@ -19,9 +19,9 @@ return (
       <form onSubmit={handleSubmit}>
         <label htmlFor="ChefScore">Chef.A : {score}/10</label>
         <input type="range" min="0" max="10" value={score} name="chefScore" onChange={(e)=>setScore(e.target.value)}/>
-        <input type="submit" value="submit" name="submit" disabled={isDisabled}/>
-        <p>Why?</p>
+        <label htmlFor="comment">Comment:</label>
         <textarea name="comment" placeholder={textAreaPlaceholder} value={comment} onChange={(e)=>{setComment(e.target.value);}}></textarea>
+      <input type="submit" value="submit" name="submit" disabled={isDisabled}/>
       </form>
       
     </div>
